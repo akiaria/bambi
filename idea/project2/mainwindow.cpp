@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QPixmap>
+#include <QDesktopServices>
+#include <QUrl>
+#include <QtCore>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,24 +31,26 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_Article_1_clicked()
 {
-    hide();
-    article_1 = new article1(this);
-    article_1->show();
+   // hide();
+    // article_1 = new Article(this);
+ //   article_1->show();
+    QDesktopServices::openUrl(QUrl(this->article_1->url, QUrl::TolerantMode));
 }
 
 
 void MainWindow::on_Article_2_clicked()
 {
     hide();
-    article_2 = new article2(this);
+    article_2 = new Article(this);
     article_2->show();
+    QDesktopServices::openUrl(QUrl("https://avianenrichment.com/learn/physical-needs/health/emergency-first-aid-basics" , QUrl::TolerantMode));
 }
 
 
 void MainWindow::on_Article_3_clicked()
 {
     hide();
-    article_3 = new article3(this);
+    article_3 = new Article(this);
     article_3->show();
 }
 
@@ -53,14 +58,14 @@ void MainWindow::on_Article_3_clicked()
 void MainWindow::on_Article_4_clicked()
 {
     hide();
-    article_4 = new article4(this);
+    article_4 = new Article(this);
     article_4->show();
 }
 
 void MainWindow::on_Article_5_clicked()
 {
     hide();
-    article_5 = new article5(this);
+    article_5 = new Article(this);
     article_5->show();
 }
 
@@ -68,7 +73,7 @@ void MainWindow::on_Article_5_clicked()
 void MainWindow::on_Article_6_clicked()
 {
     hide();
-    article_6 = new article6(this);
+    article_6 = new Article(this);
     article_6->show();
 }
 

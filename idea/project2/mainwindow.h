@@ -3,12 +3,7 @@
 
 #include <QMainWindow>
 #include "dialog.h"
-#include "article1.h"
-#include "article2.h"
-#include "article3.h"
-#include "article4.h"
-#include "article5.h"
-#include "article6.h"
+#include "article.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,11 +35,11 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Dialog *dialog;
-    article1 *article_1;
-    article2 *article_2;
-    article3 *article_3;
-    article4 *article_4;
-    article5 *article_5;
-    article6 *article_6;
+    Article *article_1 = new Article("https://www.petbarn.com.au/petspot/fish/care-and-maintenance-fish/fish-first-aid-care-sick-fish/");
+    Article *article_2;
+    Article *article_3;
+    Article *article_4;
+    Article *article_5;
+    Article *article_6;
 };
 #endif // MAINWINDOW_H
